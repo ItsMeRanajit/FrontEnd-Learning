@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Box Shadow and Text Shadow</title>
+    <style>
+      .container {
+        display: flex;
+      }
+
+      .card {
+        padding: 20px 13px;
+        border: 2px solid darkcyan;
+        margin: 40px;
+        background-color: lightcyan;
+      }
+
+      #card1 {
+        box-shadow: 10px 10px rgb(3, 97, 97);
+        /* box-shadow: (offset in) y - x (axes) - blur radius(opt.) - spread radius (opt.) - color ; */
+      }
+
+      #card2 {
+        box-shadow: -10px -10px rgb(7, 102, 102);
+        /* the size of the shadow of y and x axes can be negative too. if we give negative values the shadows will be shown on the top of the box or the opposite side of normal shadow .  you can see the difference in the webpage.
+            the negative and positive values given according to the need.*/
+      }
+
+      #card3 {
+        box-shadow: 10px -10px 7px 6px rgba(3, 97, 97, 0.758);
+        /* blur radius(7px) is applied. it sets the blur effect according to the given value. controls the blur effect  
+
+            spread radius 15px is added. manages the spreading of the blur ness. doesnot affect color depth */
+        /* the last element added to the color is alpha symbolized by a in rgba i.e. the bar of color opacity.  */
+      }
+
+      #card4 {
+        box-shadow: inset 10px 10px 10px rgb(3, 97, 97);
+        /* inset is used to add the box shadow inside direction  */
+        /* inset shadow appears in the opposite side  */
+      }
+
+      #card5 {
+        box-shadow: 10px 10px 7px rgb(3, 97, 97), -5px -5px 5px darkblue;
+        /* added multiple box shadows separated by comma */
+      }
+
+      .card h1,
+      h2 {
+        text-shadow: 10px 3px 2px rgba(0, 139, 139, 0.729);
+        /* used to add shadow in text  */
+        /* same syntax as boxshadow  */
+        /* spread radius does not work here in case of text shadow  */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card" id="card1">
+        <h1>This is text shadow</h1>
+        <h2>card1</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores quis atque rem similique reiciendis enim dolorem, maxime minus dignissimos eligendi, omnis deleniti, reprehenderit magnam!
+        </p>
+      </div>
+      <div class="card" id="card2">
+        <h2>card2</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores quis atque rem similique reiciendis enim dolorem, maxime minus dignissimos eligendi, omnis deleniti, reprehenderit magnam!
+        </p>
+      </div>
+      <div class="card" id="card3">
+        <h2>card3</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores quis atque rem similique reiciendis enim dolorem, maxime minus dignissimos eligendi, omnis deleniti, reprehenderit magnam!
+        </p>
+      </div>
+      <div class="card" id="card4">
+        <h2>card4</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores quis atque rem similique reiciendis enim dolorem, maxime minus dignissimos eligendi, omnis deleniti, reprehenderit magnam!
+        </p>
+      </div>
+      <div class="card" id="card5">
+        <h2>card5</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores quis atque rem similique reiciendis enim dolorem, maxime minus dignissimos eligendi, omnis deleniti, reprehenderit magnam!
+        </p>
+      </div>
+      <div class="card" id="card6">
+        <h2>card6</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores quis atque rem similique reiciendis enim dolorem, maxime minus dignissimos eligendi, omnis deleniti, reprehenderit magnam!
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

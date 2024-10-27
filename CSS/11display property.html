@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display property</title>
+    <style>
+        header{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            border: 4px solid blue;
+            /* display: inline; */
+            /* width: 650px;
+            margin: auto; */
+            padding: 10px;
+            /* header is a block element. display function helps to display any block element in inline element and viceversa */
+            /* we set the width of header thats why the border is looking like a inline element */
+            border-radius: 10px;
+        }
+        
+        img{
+            width: 500px;
+            margin: auto;
+            display: block;
+            /*  in case of inline element we cant set the width[[NOTE:but image is a special type of tag bcz though it is an inline element but we can set the width of it .but for other inline elements that is'nt possible.]]thats why even if mention the width it wont work. if width won't work then margin auto won't work too.that's why we had to convert it into a block element then set the width and then it'll work and margin auto will work. it is the same case for span in below. span is also a inline element. and we applied the same case for span too. */
+            padding: 7px;
+            border: 4px solid purple;
+            border-radius: 6px;
+        }
+        div.abc{
+            margin: auto;
+            border: 4px solid green;
+            /* width: 600px; */
+            padding: 5px;
+
+            border-radius: 20px;
+        }
+
+        h4{
+            border: 4px solid red;
+            /* display: inline; */
+            text-align: center;
+            margin: 10px auto;
+            width: 300px;
+            /* display: inline; */
+            /* h4 is also a block element but we set the width  of div thats why the border shown into 500px width and taking the whole width as it is a block element. if we change the display then we can see the difference clearly */
+
+            border-radius: 10px;
+        }
+            
+        span{
+            border: 2px solid red;
+            width : 200px;
+            display: block;
+            text-align: center;
+            margin: 10px auto;
+            /* it is a inline element and width wont work untill it is converted into a block element. so margin auto won't work too. thats why ,to apply all those css we have to display it into a block element. if we remove the display css then we can see the difference clearly */
+
+            border-radius: 5px;
+        }
+
+        .tom{
+            border: 4px solid red;
+            background-color: lightblue;
+            display: inline-block;
+            /* inline box is prperty in which the element takes space like inline element but the difference is that we can modify the width. but margin cannot be set because in inline element the margin is limited inside the border. so desired margin cannot be applied.but width can be set */
+
+            width: 300px;
+            text-align: center;
+            /* margin: auto; */
+            /* box-sizing: border-box; */
+        }
+
+        .cont{
+            width: 1000px;
+            margin: auto;
+            padding: 10px;
+            border: 3px solid black;
+            text-align: center;
+            
+        }
+    </style>
+</head>
+<body>
+    <header> <div class="abc">
+        <h4 >Display property tutorial</h4>
+       <img src="walpaper.jpg" alt="Error"></div>
+       <span>Here we go</span>
+
+
+       <div class="cont">
+       <div class="tom">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati doloremque rerum tempora totam porro, voluptatem impedit mollitia placeat dolorum perspiciatis id?
+        </p>
+       </div>
+
+
+       <div class="tom">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati doloremque rerum tempora totam porro, voluptatem impedit mollitia placeat dolorum perspiciatis id?
+        </p>
+       </div>
+
+       
+       <div class="tom">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati doloremque rerum tempora totam porro, voluptatem impedit mollitia placeat dolorum perspiciatis id?
+        </p>
+       </div>
+    </div>
+    </header>
+    
+</body>
+</html>

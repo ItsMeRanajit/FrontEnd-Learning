@@ -1,0 +1,79 @@
+
+
+<!-- resposive units - em, rem, vh and vw units  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Size Units</title>
+    <style>
+        html{
+            font-size: 20px;
+        }
+
+/* viewport height(vh) , viewport width(vw) */
+        .container{
+            font-size: 10px;
+            /* width: 100%; */
+            width: 100vw; /*instead of setting width manually by px vw can be used . it sets the width based on the webpage size automatically.100vw means the width will be the 100% of the screen. the integer before it defies the how much percentage of the screen will be the width . if it was 90% then the width will be 90% of the screen. no matter how much you zoom out or zoom in the webpage the width will set automatically.*/
+            /* NOTE:but instead of using vw if we use normal pecentage values then it will work the same function as vw. so se can use any of these two */
+            
+
+            /* height: 100%; */
+            height: 150vh;/*it works same as vw but the difference is it set the height automatically based on the webpage size*/
+            /* NOTE: like vw we can't use percentage values instead of vh. because if we give 100% in height it will cover 100% of the content not the 100% of webpage or maximum time percentage vlaues doesnot work properly for height. so the work of vh cannot be done by percentage values */
+            border: 10px solid darkblue;
+
+        }
+
+        h1{
+            text-align: center;
+        }
+
+
+/* em */
+        #one{
+            font-size: 3em;/*em - sets the font size ,padding , magrgin or other by multiplying the given number before to it. the font size is set for 10px . giving 5em means the font size of 10px will be multiplied by 3 and set to 30px.
+            we can check the multiplied font size in webpage by inspecting and then to computed section, font size is mentioned there*/
+
+            padding: 3em;/*giving 5em in padding means set the padding by multiplying numbers. the padding will be 3*font size not padding size.the font size was 10px then using em (3em)it became 50px . so the padding will be 3*30px*/
+
+            margin: 2em;/* 2*modified font size(30px)*/
+
+            /* no matter what is mentioned first the padding and margin always will be set by mutipliying with font size. 
+            if font size is'nt set then em will take the default size of the text for multiplication */
+
+            /* it is recommended that not to use em too frequently . for editing the size of a text or padding , margin depending to the other text this method can be used */
+            padding: unset;
+        }
+
+
+/* rem  */
+        #two{
+            font-size: 3rem;
+            padding: 2rem;
+            margin: 2rem;
+            /* rem is similar like em but em uses modified font size to set font size , padding, margin furthur but in case of rem it uses only origin font size every time . if font size later increased it wont affect the other rem mutiplication factor. it will only use the origin font size for every time it is called .
+            it also helps to set the texts when user changes the default font size . in that case the origin font size is changed so rem set the texts according to it. 
+            NOTE: if origin font size isnot given or set then rem will take the default font size of the webpage to set the texts. normally for many webpages the default font size set to a standard value 16px . thats why when i removed the html i.e. the origin font size then the rem set the text as a multiplication of 16px*/
+
+            font-size: 30px;
+            padding: unset;
+        }
+
+
+    </style>
+</head>
+<!-- responsive design helps make a website responsive or suitable for mobile , desktop or other devices -->
+<body>
+    <div class="container" id="item">
+        <h1 id="one">This is a first heading</h1>
+        <h1 id="two">This is a second heading</h1>
+        <h1 id="third">This is a third heading</h1>
+    </div>
+    
+
+</body>
+</html>

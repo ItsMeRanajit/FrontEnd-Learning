@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>media queris in grid</title>
+    <style>
+        .container{
+            display: grid;
+            grid-gap: 2rem;
+            text-align: center;
+            grid-template-areas:
+            "nav nav nav nav"
+            "section section section aside"
+            "section section section aside"
+            ". . . ." /*for a gap*/
+            "footer footer footer footer";
+
+                }
+
+        @media only screen and (max-width:300px){ 
+
+            body{
+                background-color: aquamarine;
+            }
+            
+        }
+
+     @media only screen and (min-width:301px) and (max-width:500px){  
+         
+            body{
+                background-color: rgb(226, 100, 226) ;
+            }
+            .container{
+                grid-template-areas:
+            "nav nav nav nav"
+            "section section section section"
+            "aside aside aside aside"
+            ". . . ." /*for a gap*/
+            "footer footer footer footer";
+            }
+        }
+
+
+     @media only screen and (min-width:501px) and (max-width:800px){  
+          
+            body{
+                background-color: lightgreen;
+            }
+            .container{
+                grid-template-areas:
+            "nav nav nav nav"
+            "section section section section"
+            "aside aside aside aside"
+            ". . . ." /*for a gap*/
+            "footer footer footer footer";
+            }
+           aside{
+            display: none;
+           }
+            span{
+            display: block;
+            text-align: center;
+        }
+        }
+
+
+     @media only screen and (min-width:801px) {  
+       
+            body{
+                background-color: rgb(154, 251, 246);
+            }
+            
+        }
+
+       
+
+        .border{
+            border: 2px solid black;
+            background-color: antiquewhite;
+            padding: 10px;
+        }
+
+        nav{
+            grid-area: nav;
+        }
+        section{
+            grid-area: section;
+        }
+        aside{
+            grid-area: aside;
+        }
+        footer{
+            grid-area: footer;
+        }
+    </style>
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="border">
+            <span>home </span>
+            <span>about </span>
+            <span>contact</span>
+        </nav>
+        <section class="border">
+            <h2>what we do</h2>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem, officia. Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi enim nobis reiciendis reprehenderit autem, laudantium ipsa id, accusantium quae odio fugit deleniti repellat officiis et optio. Quae, obcaecati possimus, dolorum molestias, nulla recusandae perferendis cum ne Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit dolore sint illo quaerat! Hic vero nam officia molestias pariatur tempore facere natus voluptates aperiam quibusdam odio soluta enim, atque, ipsa a amet necessitatibus repudiandae facilis, quas sit? Inventore aut minus ea libero adipisci quis rem esse. Ipsa ipsum rem accusamus libero veniam cum doloribus exercitationem porro id illo excepturi quia, facilis sit eveniet blanditiis amet corporis quisquam, temporibus vitae iusto totam! Magni, non pariatur fuga delectus provident natus deserunt explicabo esse deleniti facere, dolor fugit. Aspernatur distinctio illum in repellendus!
+            que laborum reprehenderit nemo pariatur!
+        </section>
+        <aside  class="border">
+            <h1>how to get the sevi</h1>
+        </aside>
+        <footer class="border">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, amet!</footer>
+       
+      </div>
+</body>
+</html>

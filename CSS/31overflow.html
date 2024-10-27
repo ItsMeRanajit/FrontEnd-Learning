@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .con{
+            aspect-ratio: 2/1;
+            height: 200px;
+            border: 2px solid black;
+            overflow: scroll;
+        }
+        /* here the contents are overflowing but we adding
+        overflow - scroll ; helps to remove overflow and adds a horisontal and vertical scrollbar  */
+        .con1{
+            
+            overflow: auto; 
+            /* means if overflows only then scroll bar is added otherwise not. detects automatically */
+        }
+        .con2{
+            
+            white-space: nowrap; /*means text wont go to newline */
+            overflow: hidden;/*hides overflowed element. */
+            overflow: clip;/*same as hidden but the overflowed element will not be visible progrmaticallly too*/
+
+            /* text-overflow:ellipsis;-->adds ... to indicate the text further go on but he left text willnot be visible*/
+        }
+        .con3{
+          
+            overflow-x: hidden;
+            overflow-y: scroll;
+            /* individually targeting the the axes. the vertical over flow is shown but not the horizontal one   */
+            overflow:hidden scroll;
+            /* shorthand- x , y  */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="con">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam aliquam optio iusto ipsum repellat accusamus ea natus pariatur, magni atque dolore enim perspiciatis debitis ipsam quis cupiditate veritatis incidunt accusantium. Minima soluta, perspiciatis, natus corrupti quas, nulla architecto similique quae commodi aliquid aperiam sit ad odit voluptatem temporibus laboriosam vero at doloribus suscipit blanditiis! Temporibus veniam excepturi dolor ipsum beatae eius ratione maxime dolorem nisi, iste reprehenderit nostrum necessitatibus sint quae voluptates. Eos placeat sequi quisquam aut error consectetur, minus molestiae magnam, corrupti eum ab dignissimos earum! Repellendus quos temporibus voluptatum officia omnis voluptatibus repudiandae, voluptates similique accusantium iusto excepturi!
+    </div>
+    <div class="con1 con">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam aliquam optio iusto ipsum repellat accusamus ea natus pariatur, magni atque dolore enim perspiciatis debitis ipsam quis cupiditate veritatis incidunt accusantium. Minima soluta, perspiciatis, natus corrupti quas, nulla architecto similique quae commodi aliquid aperiam sit ad odit voluptatem temporibus laboriosam vero at doloribus 
+    </div>
+    <div class="con2 con">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam aliquam optio iusto ipsum repellat accusamus ea natus pariatur, magni atque dolore enim perspiciatis debitis ipsam quis cupiditate veritatis incidunt accusantium. Minima soluta, perspiciatis, natus corrupti quas, nulla architecto similique quae commodi aliquid aperiam sit ad odit voluptatem temporibus laboriosam vero at doloribus 
+    </div>
+    <div class="con3 con">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam aliquam optio iusto ipsum repellat accusamus ea natus pariatur, magni atque dolore enim perspiciatis debitis ipsam quis cupiditate veritatis incidunt accusantium. Minima soluta, perspiciatis, natus corrupti quas, nulla architecto similique quae commodi aliquid aperiam sit ad odit voluptatem temporibus laboriosam vero at doloribus Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, ullam eveniet aliquam odit, impedit qui atque placeat, nesciunt quasi ducimus consequuntur quidem? Iure vitae hic nisi dolorum labore eos tempora eius eum saepe beatae, nostrum molestiae et illum aliquid enim laudantium natus accusantium. Facere quidem eligendi hic commodi, tempore, beatae maiores sint magnam ipsam nulla at, deserunt optio harum quas!
+    </div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- forms -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Fill The Form Carefully</h2>
+
+    <form action="something.php">
+      <label for="name">Name</label>
+      <div>
+        <input type="text" name="mynm" id="name" />
+      </div>
+      <br />
+
+      <div>Role : <input type="text" name="myrole" /></div>
+      <br />
+
+      <div>Email : <input type="email" name="myemail" placeholder="enter email" value="enter email" /></div>
+      <br />
+
+      <div>Date : <input type="date" name="mydate" /></div>
+      <br />
+
+      <div>Age : <input type="number" name="myage" placeholder="enter age" /></div>
+      <br />
+
+      <label for="eligibility">Eligible or not :</label>
+      <div>
+        <input type="checkbox" name="meligibility" id="eligibility" />
+      </div>
+      <br />
+
+      <div>Gender: Male <input type="radio" name="mygender" /> Female <input type="radio" name="mygender" /></div>
+      <br />
+
+      <div>Write about Cow: <br /><textarea name="myarea" cols="70" rows="10" placeholder="write here"></textarea></div>
+      <br />
+
+      <div>
+        <label for="car">My Car</label>
+        <select name="mycar" id="car">
+          <option value="tata">Tata</option>
+          <option value="hero">Hero</option>
+          <option value="Honda" selected>Honda</option>
+        </select>
+      </div>
+      <br />
+
+      <div>Submit : <input type="submit" value="Submit whenever you want to" /></div>
+      <br />
+
+      <div>Reset : <input type="reset" value="Reset if you want to" /></div>
+      <br />
+    </form>
+  </body>
+</html>
+
+<!-- the difference between placeholder and value is, in value what ever is written that will be the prefilled with that value for that box. you can edit the that value in the webapage.  -->
+<!-- but in placeholder whatever is given you cannot edit this on webpage . when no text is filled in that box the vlaue of placeholder will show off.when you wirte some thing on that box the whole vlaue will be over written.it gives a direction to the user what to fill in that box.  -->

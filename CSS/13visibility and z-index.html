@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visibility and z-index</title>
+    <style>
+        .box{
+            height: 200px;
+            width: 200px;
+            border: 2px solid black;
+        }
+
+        #box1{
+            /* visibility: hidden; hides element. by default it's visible. NOTE: there is another method to hide an element that is display:none; it hides the element too. but there is a small difference . when visibility is hidden it reserves the space but when display is none it does not accuire the space */
+            background-color: lightcoral;
+            position: relative;
+            top: 90px;
+            z-index: 5;
+            
+        }
+
+        #box2{
+            position: relative;
+            z-index: 30;
+            background-color: lightgreen;}
+
+        #box3{background-color: lightblue;}
+
+        #box4{background-color: lightseagreen;}
+    </style>
+</head>
+<body>
+    <div class="box" id="box1"></div>
+    <div class="box" id="box2"></div>
+    <div class="box" id="box3"></div>
+    <div class="box" id="box4"></div>
+</body>
+</html>
+<!-- Working of z-index: -->
+
+<!-- z-index helps decide which content will be shown completely in a overlapping situation.
+in this case box 2 is overlapping box1. because the z-index value of box2 is higher . so giving a high index to the box2 we stated that in a overlapping situation of box1 and box2 , box2 will overlap box1.
+
+NOTE:
+1. z index contains a value. always a higher z-index valued content will overlap the lower content in a overlappping situation.
+
+2. to use z index the content must be positioned with any except static.
+
+3. to always let the other content to overlap a specific content z-index can be set as -1. -->

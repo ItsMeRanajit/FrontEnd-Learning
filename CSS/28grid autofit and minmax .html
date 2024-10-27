@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>css grid spanning</title>
+    <!-- aim is to adjust the grids to get responsiveness -->
+    <style>
+      .container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 1rem;
+        /* to adjust do the following */
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        /* autofit means the items will fit automatically as the need.if it is a number then itwill not be responsive because the column number is fixed and will not decrease or increase as per need:  */
+        /* minmax means the minmum size will be 400px and max will be 1fr. so once it reaches 400px while keep decreasing the itll be adjusted. 
+        so choto hote hote jokhon 400px reach korbe tokhon adjust hobe.
+        ar jodi max 500px or erom kichu dea thake tahole max size hobe 500px. jodi 500px dhorar jayga thake baki screen tokhon unfold hoye jabe */
+      }
+      .item {
+        background-color: rgb(241, 186, 103);
+        border: 2px solid black;
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item">this is item-1</div>
+      <div class="item">this is item-2</div>
+      <div class="item">this is item-3</div>
+      <div class="item">this is item-4</div>
+      <div class="item">this is item-5</div>
+      <div class="item">this is item-6</div>
+      <div class="item">this is item-7</div>
+      <div class="item">this is item-8</div>
+      <div class="item">this is item-9</div>
+    </div>
+  </body>
+</html>

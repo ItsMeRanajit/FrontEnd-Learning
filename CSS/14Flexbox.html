@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <!-- helps to align content in a better way by row or column -->
+    
+    <style>
+        .container{
+            height:500px;
+            border: 2px solid darkblue;
+            background-color: lightblue;
+            width: 100%;
+            display: flex;/*enables flex box properties and alings the element in a special manner*/
+
+            /* flexbox properties */
+            flex-direction: column; /* by default it is row*/
+            flex-direction: row-reverse;/* that is also available for column reverse. it reverses the item direction and the item arrangement order. shown in the webpage*/
+            flex-direction: row;
+
+            flex-wrap: wrap; /*by default it is no- wrap. it hepls to set the items of the webpage according to the page size. in no wrap the items always remains in same arrangement not matter what is the webpage size and it looks bad. so flexwrap solves the problem*/
+
+            flex-wrap:  wrap-reverse; /* items will wrap but in reverse order. instead of wrapping downwards it wraps upwards */
+
+            flex-flow: row wrap;/*a shorthand that helps to specify the css of flex direction and flex wrap at once.follows the order flex direction - flex wrap*/
+
+            justify-content: center;/* helps to align the contents in the (flexdirection:) row or column to the center ,horizontally when flexdirection is row and vice versa */
+            justify-content: space-between;/*the space between all the boxes will be same. but it deos not conider the space at the ends*/
+            justify-content: space-evenly;/*space between all the boxes the spaces at the ends will be the same*/
+            justify-content: space-around;/*every content will have same amount of spaces around its both sides. by looking at first it may feel like the spaces at the ends and in between the boxes are'nt same but the space between the boxes is the combined space of two side by side box*/
+
+            /* the main difference in space evenly and space around is in evenly the content does not heve its own spaces but in around every content will have its own spaces around its sides and the all the spaces will be same */
+            justify-content: unset;
+
+            align-items: center;/*centers the whole row or column  vertically when flexdirection is row and vice versa. little different than justify content*/
+            align-items: flex-end;/*shifts the whole content at bottom. by default it's flexstart*/
+            align-items: stretch;/*does not let change the spaces vertically.*/ 
+
+            /* making it to normal */
+            align-items: normal ;
+            flex-wrap: nowrap;
+            /* flex-direction: column; for column flexgrow , flexbasis and flexshrink will work on height not on width */
+
+
+
+        }
+
+        .item{
+            width: 150px;
+            height: 150px;
+            background-color: lightgreen;
+            border: 2px solid darkgreen;
+            border-radius: 20px;
+            margin: 7px;
+            padding: 5px;
+            text-align: center;
+        }
+
+        #item1{
+            /* flex properties for a flex item  */
+
+
+            order: 10 ;/* order property orders the elements according to the oder values. which items order is higher that item will placed after the lower order items.so giving a item a big order that means that item will be placed at the end. in this case the order is 2 but for other items order yet not defined so this item will be placed at last*/
+        }
+
+        #item2{ order: 20;/* if two order is same then it will be placed according to the html declaration*/
+        
+        flex-grow: 2;/*it is a property that sets the growth of a item compared to others.the item width or height will increase as the the webpage or width size increase. it increases the size of the item according to the width or webpage size sets the size as the it covers the whole webpage.
+        higher flexgrow means it will grow in a higher rate as compared to the lower flex grom valued items. 
+        the rate depends on the value . the higher value the higher the rate will be than others. 
+        **  flex-grow value cannot be negative*/
+        }
+
+        #item3{
+            flex-grow: 8;/*it will grow in a higher rate than item2. the rate depends on the difference of the flexgrow values*/
+            order: 30;
+
+        }
+
+        #item4{
+            flex-shrink: 6;/*flex-shrink is similar thing as flex-grow but instead of growing elements based on the page size it works when the page size is shrinking. it is a rate of shrinking of an element. the higher value the higher rate of shrinking . 
+            NOTE: to apply flex-shrink , flex-wrap must be no wrap (default value ) otehrwise flex-shrink won't work. 
+            by defult flex-shrink value is 1*/
+        }
+
+        #item5{
+            flex-shrink: 3;/*will shrink lower rate than item4*/
+        }
+
+        #item6{
+            flex-basis: 350px;/*it modifies the width when flex dirextion is row and modifies height when flex direction is column*/
+
+            flex: 4 4 250px;/*shorthand for flex. flex: flex-grow ,flex-shrink ,flex-basis*/
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>This is my flexbox</h1>
+    <div class="container">
+        <div class="item" id="item1">First box</div>
+        <div class="item" id="item2">Second box g2</div>
+        <div class="item" id="item3">Third box g8</div>
+        <div class="item" id="item4">Fourth box s6</div>
+        <div class="item" id="item5">Furifth box s3</div>
+        <div class="item" id="item6">Sixth box s4 g4</div>
+    </div>
+</body>
+</html>
+
+<!-- NOTE: when flex-direction is set to row flex grow and flex-shrink will work on width size but when it is column then grow and shrink will work on height.
+
+
+normally the thing varies in different devices is width not the height. height can be accessesd by scrolling. thats why in the browser the height remains same as set in css and elements behaves as the set height . -->

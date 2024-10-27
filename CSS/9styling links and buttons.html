@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styling links and buttons</title>
+    <link href="https://fonts.googleapis.com/css2?family=Phudu:wght@300&family=Roboto+Slab&display=swap" rel="stylesheet">
+
+    <style>
+        .container{
+            border: 5px solid darkblue;
+            background-color: rgb(168, 232, 254);
+            margin: 10px auto;
+            text-align: center;
+            padding: 20px;
+            width: 700px;
+            font-family: 'Roboto Slab', serif;
+            border-radius: 50px;
+            line-height: 30px;
+            }
+
+            .btn{
+                background-color: rgb(255 143 127);
+                padding: 10px;
+                border-radius: 6px;
+                border: 3px solid rgb(218, 37, 37);
+                cursor: pointer;
+                /* cursor makes the cursor look like hand in see more cursor was looking like hand but not for button to solve that problem this is used*/
+            }
+            a,button{
+                text-decoration: none;
+                /* used to decorate texts . giving it none means there will be no specially marked see more with an underline. it will be shown like other texts*/
+                color: black;
+            }
+
+            button{
+                font-weight: bolder;
+            }
+
+            button:hover,a:hover  {
+                    color: white;
+                    background-color: rgb(246, 104, 85);
+                    border: 2px solid black;
+
+            }/*a:hover-properties when you hover the cursor on the text*/
+
+
+            a:active{
+                color: black;
+                background-color:  rgb(255 143 127);;
+            }
+            /* the details when the link on the other side not visited  */
+
+
+            a:visited{
+                color: grey;
+                background-color: rgb(6, 35, 104);
+            } /* the details when the link on the other side is visited it can work for anywhere you visited the link  */
+
+           
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3>Styling links and buttons</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid accusamus consequatur laudantium molestias ex reiciendis doloribus perspiciatis qui dolorem, quos, fugiat itaque magnam deserunt rerum possimus autem aliquam dolorum, quibusdam repudiandae ipsa? Voluptatem, repellat cupiditate.</p>
+
+        <a href="https://www.facek.com" class="btn"> See more </a>
+        <div><br><button class="btn">Contact Us</button></div>
+        <!-- button tag used to make a button on the webpage -->
+
+    </div>
+</body>
+</html>

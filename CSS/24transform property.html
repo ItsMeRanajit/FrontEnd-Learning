@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transform Property</title>
+    <style>
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(170, 212, 238);
+        height: 70vh;
+      }
+      .box {
+        background-color: lightskyblue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid darkblue;
+        border-radius: 10px;
+        width: 300px;
+        height: 300px;
+        transition: all 0.1s ease-in;
+        /* transform: rotate(45deg); */
+        /*transformed using rotate function and rotated 45 deg (deg has to be written) */
+      }
+
+      .box:hover {
+        transform: rotate(360deg); /*rotates item*/
+        transform: skew(30deg); /*tilts item*/
+        transform: translate(
+          100px,
+          -50px
+          ); /*translate means the item moves . you can mention movement along x or y axis by mentioning x or y after translate.
+          and in default translate it can be moved along x and y axis both as the px given into brackets. if it is given 100px x and 50px y then it will be moved 100px from x and 50px from y. the movement depends on the axes so, the x and y can be negative too for desired movements. just i think the y and y' axes are swaped .*/
+          transform: scale(
+            2
+          ); /*scale makes the item bigger multiple times as the no. given into the brackets. 2 means 2x. and giving x or y after scale means the item will be bigger from x or y axis (as given) multilple times as given in brackets.     */
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Transform Property</h1>
+    <div class="container">
+      <div class="box">this is transformation property</div>
+    </div>
+  </body>
+</html>

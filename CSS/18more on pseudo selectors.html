@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attribute and nth child pseudo selectors</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        .container{
+            margin: 20px;
+            padding: 10px;
+            display: block;
+            width: 333px;
+            margin: auto;
+            border: 2px solid black;
+        }
+        input{
+            display: block;
+        }
+        
+
+        input[type='text'] /*to select those input tags which ones input type is text*/
+        {
+            padding:5px;
+            border: 2px solid orange;
+        }
+
+        a[target]{/*to select the anchor tags with target set (target="")*/
+            text-decoration:none;
+            color: green;
+        }
+
+        a[target="_self"]{/*to target the anchor tag with target value self(target="_self")*/
+            text-decoration:none;
+            color: purple;
+
+        }
+/* select using numbers to target specific element */
+        li:nth-child(5){/* we can select by adding the number of the child and apply the css(5th child is targetted)*/
+            color: darkcyan;
+            /* border: 2px solid darkblue; */
+        }
+
+/* select using formulas of n to follow a perticular order */
+        li:nth-child(2n){/* to select the even ordered elements using formula of n.*/
+            color: lightblue;
+            text-decoration: line-through;
+        }
+
+        li:nth-child(2n+1){/* we can also use the formulas using n to follow a perticular order. here the formula is for odd elements*/
+            color: brown;
+            text-decoration: underline;
+        }
+
+/* simply writing odd or even to follow the order */
+        li:nth-child(even){/* or to select the odd or even elements simply we can write odd or even */
+            color: darkgreen;
+            text-decoration: underline;
+        }
+
+        li:nth-child(odd){/* odd elements*/
+            color: lightseagreen;
+            text-decoration: underline;
+        }
+
+        h1:nth-child(1){
+            color: darkslategray;
+        }
+    </style>
+</head>
+
+
+<body>  
+    <h1>This is our pseudo selectors</h1>
+    <h1><a href="http://google.com" target="_blank">Visit Google on a new tab</a></h1>
+    <!-- target="_blank" is used to open the anchored website on a new tab  -->
+
+    <h1><a href="https://facebook.com" target="_self">Visit Facebook in the same tab</a></h1>
+    <!-- giving target as self and not giving any target works  same -->
+
+
+    <div class="container">
+        <form action="" class="forms">
+            <input type="text" placeholder="Enter your name"><br>
+            <input type="password" placeholder="Enter Your password">
+            <input type="submit" value="submit">
+        </form>
+        <ul>
+            <li class="item" id="item1">item 1</li>
+            <li class="item" id="item2">item 2</li>
+            <li class="item" id="item3">item 3</li>
+            <li class="item" id="item4">item 4</li>
+            <li class="item" id="item5">item 5</li>
+            <li class="item" id="item6">item 6</li>
+            <li class="item" id="item7">item 7</li>
+            <li class="item" id="item8">item 8</li>
+            <li class="item" id="item9">item 9</li>
+            <li class="item" id="item10">item 10</li>
+        </ul>
+    </div>
+</body>
+</html>

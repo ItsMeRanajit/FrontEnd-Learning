@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position relative,fixed,relative,sticky</title>
+    <style>
+        *{
+            height: 4700px;
+            width: 1700px;
+        }
+        .container{
+            border: 6px solid darkblue;
+            background-color: lightyellow;
+            position: relative;
+            height: 3400px;
+            margin: 125px 10px;
+            width: 1500px;
+            /* setting the position on the parent does not affect the position of children in it. children will behave based on the size of the parent. giving position to the parent sets the position of the parent based on its other parent or the page. */
+        }
+
+
+        
+        .box{
+            border: 2px solid rgb(24, 106, 106);
+            width: 200px;
+            height: 100px;
+            margin: 10px;
+            display: inline-block; 
+        }
+
+
+ /* positon: static(default),absolute,relative,fixed,sticky 
+    offset: top,left,right,bottom*/
+
+        #box1{
+            /* relative: if relative is used then we can use the top,bottom,left, right properties. and using relative means the element can be moved top,bottom,left, right relative to it's position.  */
+
+
+            position: relative;/* moving element relative to it's position*/
+            
+            top:15px;
+            left: 10px;
+            /* element is moved from top and left from the position where element was before */ }
+
+
+
+        #box2{
+            /* absolute: it means moving element relative to it's parent. here the parent is div tag with container class. but container class has to be positioned with other positions rather than static other wise the child [box2] will be positioned based on the page size as its parent. to set the parent of the child to the other tag that tag has to be positioned rather than static . */
+            position: absolute;
+
+            bottom:15px;
+            right: 10px;
+            /* moved from top and left position from the parent [div.container]
+       */ } 
+
+
+       #box3{
+        /* fixed : it means the will be set on the position we set but it wont be out from the screen either you scroll or not it is fixed in that position. but instead of parent class the position is set according to the web page. the element will be fixed till the end of the webpage. */
+        position: fixed;
+
+        top: 10px;
+        left: 050px;
+        /* set in the position and it wont go out from the screen as it is fixed there. you can  scroll whichever side you want it is fixed till the end of the web page. the top is set 10px but it is set 10px far from the starting of the webpage rather than the starting of its parent class. and it is fixed in the same position till the end of the webpage. although the parent class is over.*/
+
+       }
+
+
+
+       #box4{
+            /* sticky : it is almost the same as fixed. but the difference is - in the fixed the element is set according to the web page but in sticky the element is set according to the parent class. and remains fixed till the end of the parent .
+            the sticky position doesnt work untill the offset is matched . like when top is 30px . it wont work untill the the top reaches 30px while scrolling. so sticky works when the offset condition is matched.  */
+            position: sticky;
+            top: 30px;
+            /* bottom:10px; */
+            left: 350px;
+            /* as you can see the element hasn't moved from the actual position. but while scrolling when the top reached 30px the sticky behaviour strats to work . so untill the top matched it is static.*/
+            
+            margin: 70px 10px;
+
+       }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div class="box"  id="box1">1 - relative</div>
+    <div class="box" id="box2">2 - absolute</div>
+    <div class="box" id="box3">3 - fixed</div>
+    <div class="box" id="box4">4 - sticky</div>
+    
+</div>
+</body>
+</html>

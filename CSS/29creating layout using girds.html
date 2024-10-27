@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>creating layouts</title>
+    <style>
+      #navbar {
+        grid-area: nabar;
+      }
+      #section {
+        grid-area: section;
+      }
+      #sidetexts {
+        grid-area: sidetexts;
+      }
+      #footer {
+        grid-area: footer;
+      }
+      .container {
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+        grid-template-areas:"nabar nabar nabar nabar"
+                            "section section section sidetexts"
+                            "section section section  sidetexts"
+                            "footer footer footer footer";
+        
+                          
+      }
+
+      .item {
+        background-color: lightgreen;
+        border: 2px solid darkgreen;
+      }
+
+      
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item" id="navbar">Home aboutus contactus shop</div>
+      <div class="item" id="section">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda nulla suscipit, sint veniam voluptatum qui dolores, aut, corporis inventore vero corrupti quia vitae! Sequi, voluptate
+        dolorum fuga consectetur perferendis cumque aliquam. Fugiat eum perspiciatis iusto quae id, rerum perferendis dolorem corrupti dolore saepe 
+      </div>
+      <div class="item" id="sidetexts">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est deleniti nam, necessitatibus tempora eius qui dignissimos architecto temporibus? Perferendis incidunt alias cumque quasi quam
+        dolores ipsam sint pariatur inventore reprehenderit, aspernatur dolorem quo eum. Vero magni, perferendis repellat aliquam quos maxime possimus corrupti nobis suscipit dolor maiores quasi culpa
+        sit?
+      </div>
+      <div class="item" id="footer">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis, nemo!</div>
+    </div>
+  </body>
+</html>

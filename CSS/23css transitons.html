@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS transitions</title>
+    <style>
+        .box{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+            width: 200px;
+            margin: 10px;
+            font-size: 20px;
+            color: darkred;
+            background-color: lightsalmon;
+            border: 2px solid darkred;
+            transition-property: background-color ;/*we have to select the property for transition. */
+            
+            transition-duration: 0.4s;/*each color changes to other color by shifting all colors thats comes between those two colors. transition duration controls that shifting time.*/
+            transition-timing-function: ease-in;
+            /* works same as animation-timing-function  */
+            
+
+            transition-delay: 2s;/* each transition takes same delay. to shift to other and to shift back both takes the delay*/
+        }
+
+        #box2{
+            /* background-color: aliceblue; i dont know when im putting bg color the transition is not happening */
+            
+            transition: all 1s ease-in 0.5s;
+            /* transition: select property _ duration _ timing funtion _ delay; */
+            /* there is multiple properties to transition thats why all is used. it considers all property at once that is transitionable. transition for all properties given in the hover  */
+
+            /* in the above box nothing related to border or width hasnt passed thats why the width isnot transitioning  */
+        }
+
+         .box:hover{
+            background-color: lightgreen;
+            width: 400px;
+            height: 400px;
+            border-radius: 20px;
+            color: black;
+            font-size: 16px;
+         }
+    </style>
+</head>
+<body>
+    <h2>This is css transition tutorial</h2>
+    <div class="container">
+        <div id="box1" class="box">this is my box</div>
+        <div id="box2" class="box">this is my box</div>
+    </div>
+</body>
+</html>
+

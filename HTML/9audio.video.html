@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>audio,video</title>
+</head>
+<body>
+    <video src="chupichopa.mp4" controls  loop muted poster="unnamed.jpg">Enjoy</video>
+    <!-- controls- adds the play/pause and other controls. without it video wont play
+    autoplay- with it the video will automatically play but only one time
+    loop - with it the video will play in loop. but without autoplay the video will go on loop when the play is clicked 
+    muted - automatically muted but can be unmuted with controls
+    poster - this works like a thumbnail.does not works for audio --->
+    <!-- ALL OF THIS WORKS FOR MP3 TOO -->
+
+    <audio src="icecram.mp3" autoplay controls loop muted preload="auto"></audio>
+    <!-- perload- by default it is none.means the audio will play pause normally.
+            then, metadata- only loads the data about the audio.
+            then, auto- browsers loads the entire audio.to play or operate imidiately -->
+
+            <svg height="30" width="30">
+                <rect width="30" height="30" style="fill:rgb(0,0,255);stroke-width:1;stroke:rgb(0,0,0)" />
+            </svg>
+            <!-- makes some shapes -->
+
+            <iframe src="https://www.codewithharry.com/tutorial/working-with-svg/" frameborder="0" width="600px" height="900px"></iframe >
+            <!-- includes a webpage in the site -->
+</body>
+</html>

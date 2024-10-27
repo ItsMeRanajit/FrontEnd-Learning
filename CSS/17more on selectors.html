@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on Selectors</title>
+    <style>
+        h1{
+            background-color: lightsalmon;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        div p{
+            background-color: lightskyblue;
+             }
+        /* targetting p using the above method also targets all p in any div.no matter in which tag p is in, if it is in div it will be targeted.it is applicable for all tags*/
+
+        /* to solve this prblem, target the direct childs inside of div or other tags > symbol is used.direct child means the child tags inside the parent tag. the tags inside those child tags arent considered. */
+
+        /* parent tag > direct child  */
+        div > p{
+            background-color: aquamarine;
+        }
+    /* it is for all divs direct child which is p tag. for the  container div only p is targeted, bcz it is the only p tag which is direct child of that div. 
+    but for the row div nothing is targeted , bcz there is no p tag which is dirct child of that div. there is a p but it is not the direct child. */
+
+ /* ----------------------------------------------------------- */
+    /* to target a tag which is started after ending of a perticular tag  */
+    /* the  tag that ended + next tag that started (next tag will be targetted) */
+    div + p{
+        background-color: yellow;
+    }
+ </style>
+
+</head>
+<body>
+    <h1>More on Selectors</h1>
+    <div class="container">
+
+        <div class="row">
+            <ul>
+                <li><p>this is internal paragraph inside li</p></li>
+            </ul>
+        </div>
+
+        <p>this is outer paragraph</p> <!-- started after ending of div -->
+    </div>
+
+    <p>this is external paragraph</p><!-- started after ending of div -->
+    <p>this is most external paragraph</p><!-- started after ending of p , it isnot targetted -->
+</body>
+</html>
+
+

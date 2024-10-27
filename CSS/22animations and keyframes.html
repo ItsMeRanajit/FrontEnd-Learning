@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animatioins and keyframes</title>
+    <style>
+        .container{
+            background-color: aquamarine;
+            position: relative;
+            height: 608px;/*(100px+2px*2(box1)+ 500px +2px *2(box2))*/
+            border: 2px solid darkcyan;
+        }
+
+        .box{
+            background-color: lightpink;
+            border: 2px solid rgb(70, 187, 185);
+            width: 100px ;
+            height: 100px;
+            text-align: center;
+
+            /* to set the animation set the following processes.  */
+            position: relative;/*firstly, to animate we have to move the item. and for that we have to set the position according to our need.*/
+            animation-name: run;/*now we have to give a name to our animation. the name can be anything.*/
+            animation-duration: 1s;/*animation duration controls the time duration to complete an animation. the duration can be fractional eg. 0.5s , 1.3s etc.*/
+            animation-iteration-count: infinite;/*this sets the iteration number of the animation. it can be infinte. by default it is 1.*/
+            animation-fill-mode:forwards; /*this sets the state of the item after animation. forward means after the animation it holds the state and doesnot come back to its original size. 
+            and by default it is backwards means the item will be back to its original form after animation.
+            most likely alternate is used for animation-direction to animate back to its original size*/
+            animation-timing-function:ease-in; /* it manipulates the animation speed . instead of running animation in a same pace for the set time it changes the speed different times as set. 
+            ease-in means the speed is slower at first and gradually increases.
+            ease-out is the opposite of it.
+            ease-in-out means slow - fast - again slower at the end*/
+            animation-delay: 2s;/* it sets the delay of starting the animation. animation will run after 3seconds of  opening the page*/
+            animation-direction: alternate;/*sets the direction of the animation. alternate means it will animate and come back to its previous size with the reverse animation ,not suddenly*/
+        }
+
+        /* after those we have to run this specific feature. write @keyframe animaitionname{}. then, into it we have to set  adjustments or percentage selection.
+        with adjustments, where to start (from{}) and where to stop(to{}).
+        with percentage , 0%{}, 76% , 50%, 43%, 100) etc. */
+
+        /* with adjusments */
+        @keyframes run{
+            from{
+                width: 100px; /*the animation will start from 200px.*/
+                height: 100px;
+            }
+
+            to {
+                width: 500px;/*and gonna end at 500px.*/
+                height: 500px;
+            }
+        }
+        
+        .box2{
+            background-color: lightpink;
+            border: 2px solid rgb(70, 187, 185);
+            width: 500px ;
+            height: 500px;
+            text-align: center;
+            margin: 0px;
+            position: relative;
+            animation-name: run2;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            /* animation-fill-mode: forwards; */
+            animation-timing-function: ease-in;
+            animation-delay: 2s;
+            animation-direction: alternate;/*animates back to its original size*/
+        }
+
+        @keyframes run2{
+            from{
+                width: 500px;
+                height: 500px;
+            }
+            to{
+                width: 100px;
+                height: 100px;
+            }
+        }
+
+        #rotate{
+            width:400px;
+            height:400px;
+            border: 2px solid darkgreen;
+            position: absolute;
+            bottom: 100px;
+            right: 120px;
+
+
+        }
+
+        .circle{
+            width:200px;
+            height: 200px;
+            border: 2px solid darkgreen;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            background-color: rgb(176, 241, 78);
+            /* animation-name: run3;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in;
+            animation-delay: 2s; */
+
+            /* the shorthand of animation: animation-name _ animation-duration _ animation-timing-function _ animation-delay _ animation-iteration-count _ animation-direction _ animationfillmode _ animation-play-state */
+            animation: run3 1s ease-in 2s infinite alternate-reverse;
+            animation-play-state: running;/* controls weather an animation is pasued or running . if paused no animation is shown.and viceversa*/
+        }
+         @keyframes run3{
+            
+            25%{  /* after 25% top is 198px and so that for other ones  */
+                top: 198px;
+                left: 0px;
+             }
+             50%{
+                top: 198px;
+                left: 198px;
+             }
+             75%{
+                top: 0px;
+                left: 198px;
+             }
+             100%{
+                top: 0px;
+                left: 0px;
+             }
+             /* it is done using percentages. when the mentioned % of the given animation time reaches specified function for that percentage works.   */
+         }
+
+
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Animations and keyframes</h1>
+    <div class="container">
+        <div class="box">
+            This is a box .
+        </div>
+
+        <div class="box2">
+            This is our Second Box.
+        </div>
+        <div id="rotate">
+             <div class="circle"></div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+<!-- syntax for set an animation  -->
+<!-- {
+position:
+animation-name:
+animation-duration:                                         
+animation-iteration-count:
+animation-fill-mode:
+animation-timing-function:
+animation-delay:
+ }
+
+@keyframes{
+    form{}
+    to{}
+}-->

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>height width borders,backgrounds</title>
+    <style>
+        #firstid{
+            background-color: orange;
+            height: 70px;
+            width: 600px;
+            color: black;
+            border-color: blue;
+             border-style: solid;/* borders wont be applied untill border style is given. */
+            border-width: 5px;
+            border-radius: 20px;
+        }
+
+        .alu{
+            background-color: lightblue;
+            height: 50px;
+            width: 500px;
+            color: green;
+            border: 6px solid rgb(21, 66, 64) ;
+            /* the above line is used to add all the border details in only one line */
+            border-radius: 25px;
+        }
+
+        .balu{
+            background-color: green;
+            color: cyan;
+            height: 90px;
+            width: 660px;
+            border-right: 4px solid orange;
+            border-left: 2px solid red;
+            border-top: 6px solid blue;
+            border-bottom: 2px solid greenyellow;
+            /* border added manually for each side using different combinations */
+
+
+            border-top-right-radius: 30px;
+            border-bottom-right-radius: 30px;
+            border-bottom-left-radius: 10px;
+            border-top-left-radius: 10px; 
+            /* border radius added manually for each side  */
+           
+        }
+
+        .kumro{
+            background-color: yellow;
+            color: blueviolet;
+            height: 60px;
+            width: 700px;
+
+            border-end-end-radius: 30px; 
+            /* same as bottom right */
+
+            border-end-start-radius: 30px;
+            /* same as bottom left  */
+
+            border-start-end-radius: 30px ;
+            /* same as top right */
+
+            border-start-start-radius: 30px;
+            /* same as top right */
+        }
+
+        .begun{
+
+            font-size: 30px;
+            height: 300px;
+            width: 700px;
+            border: 4px solid black;
+            color: cyan;
+            /* background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSa787MyWNpnlypfeISlx0ZYrrwtuNQmC3PIJBqvAnqVA&s) ; */
+            background-image: url('walpaper.jpg');
+
+            background-repeat: no-repeat;
+            /* for no repeatation.there are repeat x and repeat y to repeat along the axes */
+
+            background-position:  center center;
+            /* the position of the image can be edited by center, top, bottom combinations and also manually using px  */
+        }
+        
+
+    </style>
+</head>
+<body>
+    <h2>borders and backgrounds</h2>
+    <p id="firstid">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+
+    <p class="alu">Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+
+    <p class="balu">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut.
+    </p>
+
+    <p class="kumro">Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+
+    <p class="begun">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae quidem blanditiis assumenda.</p>
+</body>
+</html>

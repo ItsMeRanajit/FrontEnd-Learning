@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors</title>
+
+    <style>
+
+        /* element selector */
+        p{
+            color: rgb(115, 198, 115);
+            border: 2px solid red;
+        }
+
+
+        /* css for paragraph with id=id1 */
+        #id1{
+            color: orange;
+        }
+
+
+        /* to select with class name a . is used  (para with id2)*/
+        .color{
+             color: seagreen !important; /*id2 para */
+        } 
+
+        /* multiple class csses added into one para */
+        .background{
+            color: lightgreen ;
+            background-color: blue;
+        }
+
+
+        /* grouping selectors */
+        footer,span{
+            background-color: hotpink;
+            color: purple;
+            /* internal css getting more precidence bcz written later*/
+        }
+
+    </style>
+
+<link rel="stylesheet" href="2css.css">
+
+</head>
+<body>
+    <h5>Css Selectors</h5>
+    <p>Lorem ipsum dolor sit amet.</p>   <!--element selector ignored bcz external css added later so got more precidence-->
+
+
+
+    <p id="id1">0 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium, modi repellat.</p> <!-- id1 css-->
+
+
+
+    <p id="id2" class="color background">0.5 Lorem ipsum dolor sit.</p> <!-- 2 class css -->
+
+
+
+    <div class="color"> <!-- div class added but ignored bcz in para csses written later so got more priorities --> 
+
+
+    <p id="id3">1 Lorem ipsum dolor sit.</p>  <!-- id3 in external file 2css -->
+
+
+    <p  class="color" id="id1">2 Lorem, ipsum dolor.</p>
+    <!-- in above para class has more priority although written before and color class css is added -->
+
+
+    <p id="id1">3 Lorem, ipsum dolor.</p>
+    <!-- there are two paras have same id  and has same id i dont know why and id1 css is added-->
+
+
+    <span class="color">span! Lorem ipsum dolor sit.
+    </span> <!-- grouping id added but class css got more priority and in background of grouping is added bcz class css doesnt have background color so grouping css is applied in this case -->
+
+    </div>
+
+
+    <div class="background"><p>Lorem ipsum dolor sit amet consectetur.</p></div> <!-- css added in div so every content of div have class css properties -->
+
+
+    <footer >footer is added</footer> <!-- only grouping css is applied -->
+
+</body>
+</html>

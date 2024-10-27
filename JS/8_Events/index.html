@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 100px;
+        aspect-ratio: 1/1;
+        background-color: rgb(244, 244, 160);
+      }
+    </style>
+  </head>
+  <body>
+    <button id="btn">Click Me</button>
+    <!-- onclick is a event. which means when the click event occurs the mentioned code is triggered -->
+    <button ondblclick="console.log('works when 2 times clicked');" id="box">Click me 2 times</button>
+    <!-- ondblclick works when doble clicked -->
+
+    <div class="box">this is box</div>
+    <!-- onmouseover works when mouse is hovered  -->
+    <!-- these are inline event handling. it isnt a good method -->
+    <script src="event.js"></script>
+  </body>
+</html>

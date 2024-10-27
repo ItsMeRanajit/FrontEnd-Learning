@@ -1,0 +1,25 @@
+http - hyper text transfer protocol
+ http verbs are the nature of requests that we are asking to the api. there are many types of request based on which api gives us response . the types of request generally called by some methods
+
+ get - to get some data
+ post- to send some data
+ delete - to delete some data that is get from api. eg - ig account delete
+ patch - to modify some pre gotten data
+
+
+
+
+
+ NOW A NEW THING IS RESPONSE STATUS CODE--->
+
+/100 - 199 means informational response(not much needed)
+ 200 - 299 means the everything is okay. a successfull response
+300 - 399 means redirection massage(not much needed)
+/400 - 499 means some error has been made from the user side(404 means pagenotfound)
+500 - 599 means error from server side
+
+
+
+
+header -->
+in the response from api thers a header section in it that holds more additional inforamtion

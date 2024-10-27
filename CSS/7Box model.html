@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box model
+    </title>
+    <style>
+        body{/*for the whole background body is used*/
+            background-color:#68a868;
+            border: 10px solid #2fb066;
+        }
+        *{ 
+               box-sizing: border-box;  /* dont let the width change and makes stable with the border */
+               margin: 0px;
+               padding: 0px;
+        } /*this * is a universal css. used for add a css to the whole file*/
+
+
+        .container{
+            border:4px solid rgb(14, 55, 14);
+            background-color: rgb(40, 153, 40);
+            /* padding: 20px; */
+            padding-top: 50px;
+            padding-bottom: 50px;
+            padding-right: 30px;
+            padding-left: 30px;
+            /* padding makes the class contents more alligned to the conter form all sides   */
+            /* we can give padding form any sides  */
+
+
+            margin: 60px;
+            /* for margin the case is same as padding. */
+
+            width: 300px;
+           
+            border-radius: 30px 30px 30px 30px;
+        }
+
+
+        #ok1{
+            border:4px solid rgb(105, 51, 16);
+            background-color: rgb(211, 77, 36);
+            border-radius: 50px 50px 50px 50px;
+             padding: 20px 30px 20px 30px; /*padding can be defined like this too 
+            top-right-bottom-left order */
+
+            margin: 30px 20px 30px 20px ;
+            /* top-left-bottom-right */
+
+            width: 200px;
+        }
+
+        #ok2{
+            border:4px solid rgb(17, 17, 161);
+            background-color: rgb(41, 230, 240);
+            border-radius: 50px 50px 50px 50px;
+             padding: 20px 30px 20px 30px; /*padding can be defined like this too 
+            top-right-bottom-left order */
+
+            margin: 30px 20px 30px 20px ;
+            /* top-left-bottom-right */
+
+            width: 200px;
+            /* changing padding can change the width because width size includes padding bordersize too. so chaging these can make a change into width size. to resolve this problem BOX SIZE is used. it makes the width steady and dont let it change, instead of width it changes the height.  
+             THE BOX SIZING IS ADDED TO UNVERSAL CSS(DENOTED WITH *{})*/
+            
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+    <h4>Box Model</h4>
+    <p id="ok">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, nisi eos consectetur ratione qui pariatur!
+    </p></div>
+      
+
+    <div class="container">
+    <h4>Box Model</h4>
+    <p id="ok1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, nisi eos consectetur ratione qui pariatur!
+    </p></div>
+
+
+    <div class="container">
+    <h4>Box Model</h4>
+    <p id="ok2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, nisi eos consectetur ratione qui pariatur!
+    </p></div>
+</body>
+</html>

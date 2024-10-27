@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Allignment</title>
+    <link href="https://fonts.googleapis.com/css2?family=Phudu:wght@300&display=swap" rel="stylesheet">
+    <style>
+        *{ 
+            box-sizing: border-box;
+        }
+         
+        .container{
+            font-family: 'Phudu', cursive;
+            width: 700px;
+            border: 10px solid rgb(74, 11, 11);
+            margin: 20px auto ;/* using auto in axes(can be applied to x or y or both) it keeps the content in the center (width must be mentioned) based on the axis*/
+            line-height: 30px;
+            background-color:antiquewhite;
+            
+         
+        }
+         
+        .item{
+            border: 4px solid #a52a2a;
+            color:  rgba(56, 6, 6, 0.959);
+            background-color: rgb(247, 169, 169);
+            padding: 15px 7px;
+            margin: 10px 4px;
+            border-radius: 10px  10px  10px  10px;
+            font-weight: bolder;
+        }
+
+        #frut{
+                float: left;
+                width: 48%;
+                height: 400px;
+        }
+        #veg{
+            float: right;/*helps to allign the contents to left or right*/
+
+                width: 48%;
+                height: 400px;
+        }
+        #groc{
+                /* float: left; */
+                width: 100%;
+                margin: auto ;
+                /* an overlapping problem occuring when other contents are allinged to left but this content isn't alligned to solve this CLEAR is used  */
+                 clear: both; 
+                 /* cleared all left alligned contents which are occuring problems */
+                 /* to clear both sides float overlapping problem use - clear : both */
+        }
+
+            p{
+                text-align: justify;
+                /* using text allign helps to align the text 
+                justify means the text covers the whole box perfectly*/
+            text-align: center;
+        }
+            /*  used p to add css to all paragraphs */
+            
+
+            h4{
+                text-align: center;
+                font-weight: bolder;
+            }
+
+    </style>
+</head>
+<body>
+    <div class="container" id="box">
+        <h1 style="width: 50%; margin: auto;">
+        Welcome to my store
+        </h1>
+        <div class="item" id="frut">
+            <h4>Fruits</h4>
+                <p class="para" id="frut1">lroem Lor Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum accusantium ut itaque beatae nihil, autem deleniti odio! Laborum fugiat aspernatur tenetur quasi eos corporis dolores ex optio minus sapiente, modi harum et odit temporibus. lorem45em ipsum dolor sit amet consectetur.</p>
+        </div>
+
+
+        <div class="item" id="veg">
+            <h4>vegetables</h4>
+                <p class="para" id="veg1">Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor, sit Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error voluptate molestias in ipsa repellat iste perferendis commodi ullam, eum possimus sunt non! Voluptate, illo. A nulla harum assumenda neque ,  beatae dolor, maxime non, quibusdam repudiandae?</p>
+        </div>
+
+
+        <div class="item" id="groc">
+            <h4>Groceries</h4>
+                <p class="para" id="groc1">Lorem ipsum dolor sit amet consectetur.</p>
+        </div>
+       
+    </div>
+    
+</body>
+</html>
+
+<!-- to allign a content in the page FLOAT used but using float sometimes causes content overlapping to solve this problem we use clear. clearing the left box over lapping clear : left and same for the right . for clearing both side overlapping we use clear:both which all are shown in the above css  -->

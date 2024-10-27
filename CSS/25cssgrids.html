@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>css grid</title>
+    <style>
+      .container {
+        display: grid; /*once the display is made grid then all the items that are in the container becomes grid items*/
+        grid-template-columns: 200px 150px 100px; /* this makes 3 columns of the following size and the items are divided into those columns*/
+        grid-template-columns: 200px auto 100px; /* using auto means the mentioned width will work like same but the auto element will take the remaining space. mentioning auto in the middle element means the middle column will take the remaining space as much it can take after the 1st element and after the middle element the last element is moved to the very end .
+         if the auto was at the last then the first two element will take the spaces normally and the last one will the whole remaining space.
+         and not mentioning the auto means there might some space left depending on the size mentioned*/
+
+        grid-template-columns: 1fr 3fr 2fr; /* mentionig fr means the screen is divided in 1:3:2 ratio and each part is a column*/
+
+        grid-template-columns: repeat(3, auto);
+        /*that means we dont have to write width of the column multiple times. repeat(3, auto)means 3 columns will be created and width of each is set auto. helps for large number of elements.*/
+
+        grid-gap: 1.5rem;
+      }
+
+      .item {
+        height: 70px;
+        padding: 20px;
+        margin: 10px;
+        background-color: aquamarine;
+        border: 2px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- grid helps to make a layout of a website . each item is created that are a portion of layout-->
+    <div class="container">
+      <div class="item">this is item-1</div>
+      <div class="item">this is item-2</div>
+      <div class="item">this is item-3</div>
+      <div class="item">this is item-4</div>
+      <div class="item">this is item-5</div>
+      <div class="item">this is item-6</div>
+      <div class="item">this is item-7</div>
+      <div class="item">this is item-8</div>
+      <div class="item">this is item-9</div>
+    </div>
+  </body>
+</html>
